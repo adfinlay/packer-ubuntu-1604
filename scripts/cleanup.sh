@@ -16,7 +16,7 @@ echo 'iface eth1 inet manual' >> /etc/network/interfaces
 # Uninstall Ansible and other Pip deps.
 pip freeze | grep -v "^-e" | xargs pip uninstall -y
 easy_install -m pip
-apt -y purge --auto-remove python-setuptools python-dev
+apt -y purge --auto-remove python-setuptools python-dev build-essential libssl-dev libffi-dev
 
 # Apt cleanup.
 apt autoremove
